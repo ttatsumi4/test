@@ -206,6 +206,51 @@ textarea {
     gap: 8px;
 }
 
+.insert-schedule-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.btn-insert {
+    background: transparent;
+    border: 2px dashed #b8b8b8;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 0.95rem;
+    font-weight: 500;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-insert:hover {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+    color: #667eea;
+    transform: scale(1.02);
+}
+
+.btn-insert:active {
+    transform: scale(0.98);
+}
+
+.insert-icon {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.insert-text {
+    font-family: inherit;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.8rem;
