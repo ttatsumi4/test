@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行スケジュール管理アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🗺️ 旅行スケジュール管理</h1>
+        </header>
+
+        <div class="form-section">
+            <h2 id="form-title">新しい予定を追加</h2>
+            <form id="schedule-form">
+                <div class="form-group">
+                    <label for="schedule-name">予定名 *</label>
+                    <input type="text" id="schedule-name" required placeholder="例: 東京タワー観光">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="start-time">開始時間 *</label>
+                        <input type="datetime-local" id="start-time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end-time">終了時間 *</label>
+                        <input type="datetime-local" id="end-time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">備考</label>
+                    <textarea id="notes" rows="3" placeholder="詳細やメモを入力してください"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="submit-btn">追加</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none;">キャンセル</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="schedule-list-section">
+            <h2>スケジュール一覧</h2>
+            <div id="schedule-list" class="schedule-list">
+                <p class="empty-message">まだ予定がありません</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
